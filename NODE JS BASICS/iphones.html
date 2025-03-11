@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .iphone {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        .iphone img {
+            width: 100%;
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+        }
+        .iphone h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .iphone p {
+            font-size: 14px;
+        }
+        .iphone .price {
+            color: green;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available iphones</h1><hr>
+    <div id="iphone-list"></div>
+
+    <script>
+        // Fetch the JSON file containing iPhone data
+        fetch('iphones.json')
+            .then(response => response.json())
+            .then(data => {
+                let iphoneList = document.getElementById('iphone-list');
+                data.forEach(iphone => {
+                    // Create the HTML structure for each iPhone
+                    let iphoneDiv = document.createElement('div');
+                    iphoneDiv.classList.add('iphone');
+
+                    iphoneDiv.innerHTML = `
+                        <img src="${iphone.image}" alt="${iphone.name}">
+                        <h3>${iphone.name}</h3>
+                        <p>Model: ${iphone.model}</p>
+                        <p>${iphone.description}</p>
+                        <p class="price">${iphone.price}</p>
+                    `;
+
+                    // Append the created div to the iphone-list container
+                    iphoneList.appendChild(iphoneDiv);
+                });
+            })
+            .catch(error => {
+                console.error("Error loading the iPhone data", error);
+            });
+    </script>
+</body>
+</html>

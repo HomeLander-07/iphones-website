@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "name": "iPhone 13 Pro",
+      "model": "A2636",
+      "description": "The iPhone 13 Pro features a Super Retina XDR display, 5G connectivity, and a triple-camera system.",
+      "price": "$999",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6443/6443321cv11d.jpg"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 13",
+      "model": "A2633",
+      "description": "The iPhone 13 offers a high-performance A15 Bionic chip and an excellent camera system.",
+      "price": "$799",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6443/6443192_sd.jpg"
+    },
+    {
+      "id": 3,
+      "name": "iPhone 12 Pro Max",
+      "model": "A2342",
+      "description": "iPhone 12 Pro Max offers a 6.7-inch OLED display and 5G capabilities, along with the A14 Bionic chip.",
+      "price": "$1099",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-pro-max-blue-2020?wid=2000&hei=1897&fmt=jpeg&qlt=95&.v=1635202944000"
+    },
+    {
+      "id": 4,
+      "name": "iPhone 12",
+      "model": "A2172",
+      "description": "The iPhone 12 features a 6.1-inch Super Retina XDR display and Ceramic Shield for better durability.",
+      "price": "$799",
+      "image": "https://tse4.mm.bing.net/th?id=OIP._BgUb3XCqjQB8Z9fqyL8cQHaIw&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 5,
+      "name": "iPhone 11 Pro",
+      "model": "A2160",
+      "description": "iPhone 11 Pro comes with a triple-camera system and Apple's A13 Bionic chip.",
+      "price": "$999",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.v3OM3ZUOQaiHAPFUuZBwMAHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 6,
+      "name": "iPhone SE (2nd generation)",
+      "model": "A2275",
+      "description": "The iPhone SE is compact, powerful, and equipped with the A13 Bionic chip, just like the iPhone 11.",
+      "price": "$399",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.7NQao-kbvsAzjNDdKKhQdAHaMA&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 7,
+      "name": "iPhone X",
+      "model": "A1865",
+      "description": "iPhone X features a Super Retina display, Face ID, and wireless charging.",
+      "price": "$999",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.P5S6pFfMjn6PB2GCWLbF8AHaMU&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 8,
+      "name": "iPhone 8",
+      "model": "A1863",
+      "description": "iPhone 8 includes a Retina HD display, wireless charging, and an A11 Bionic chip.",
+      "price": "$699",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.guraOrut3BNCmNlW14GPjQHaHJ&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 9,
+      "name": "iPhone 7 Plus",
+      "model": "A1661",
+      "description": "The iPhone 7 Plus offers dual-lens camera, 5.5-inch display, and long battery life.",
+      "price": "$669",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.kfIg1LCTHkqnxJ8oq5g8FQHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": 10,
+      "name": "iPhone 6s",
+      "model": "A1633",
+      "description": "iPhone 6s includes 3D Touch, a 12MP camera, and the A9 chip.",
+      "price": "$499",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.rrPfymbPe3NQrBuIbKiLjAHaFj&pid=Api&P=0&h=180"
+    }
+  ]

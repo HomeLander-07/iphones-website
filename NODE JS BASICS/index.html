@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .student-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Student Details Lookup</h1>
+<label for="hallticket">Enter Hallticket Number:</label>
+<input type="text" id="hallticket" placeholder="Enter Hallticket Number">
+<button onclick="getStudentDetails()">Get Details</button>
+
+<div id="result" class="student-info"></div>
+
+<script>
+// Sample XML Data
+const xmlData = `<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <hallticket>1001</hallticket>
+        <name>narshi</name>
+        <age>20</age>
+        <grade>A</grade>
+    </student>
+    <student>
+        <hallticket>1002</hallticket>
+        <name>Jane Smith</name>
+        <age>22</age>
+        <grade>B</grade>
+    </student>
+    <student>
+        <hallticket>1003</hallticket>
+        <name>Michael Johnson</name>
+        <age>21</age>
+        <grade>A</grade>
+    </student>
+    <student>
+        <hallticket>1004</hallticket>
+        <name>Emily Brown</name>
+        <age>19</age>
+        <grade>B+</grade>
+    </student>
+    <student>
+        <hallticket>1005</hallticket>
+        <name>David Wilson</name>
+        <age>23</age>
+        <grade>A-</grade>
+    </student>
+</students>`;
+
+function getStudentDetails() {
+    const hallticketInput = document.getElementById('hallticket').value;
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlData, "application/xml");
+    const students = xmlDoc.getElementsByTagName('student');
+    
+    let result = "Student not found.";
+    
+    for (let i = 0; i < students.length; i++) {
+        const hallticket = students[i].getElementsByTagName('hallticket')[0].textContent;
+        if (hallticket === hallticketInput) {
+            const name = students[i].getElementsByTagName('name')[0].textContent;
+            const age = students[i].getElementsByTagName('age')[0].textContent;
+            const grade = students[i].getElementsByTagName('grade')[0].textContent;
+            
+            result = `
+                <h3>Student Details:</h3>
+                <p><strong>Hallticket:</strong> ${hallticket}</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Age:</strong> ${age}</p>
+                <p><strong>Grade:</strong> ${grade}</p>
+            `;
+            break;
+        }
+    }
+    
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+
+</body>
+</html>
